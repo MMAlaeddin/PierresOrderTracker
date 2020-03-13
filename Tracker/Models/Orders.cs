@@ -30,7 +30,7 @@ namespace Tracker.Models
     }
     public void AddOrder(Order order)
     {
-      Orders.Add(order);
+      Vendors.Add(order);
     }
   }
 }
