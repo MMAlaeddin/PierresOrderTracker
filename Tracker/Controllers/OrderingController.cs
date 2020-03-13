@@ -7,6 +7,12 @@ namespace Tracker.Controllers
 {
   public class OrderingController : Controller
   {
+    [HttpGet("/orders")]
+    public ActionResult Index()
+    {
+      List<Order> allOrders = Order.OrderList();
+      return View(allOrders);
+    }
     [HttpGet("/orders/new")]
     public ActionResult New()
     {
