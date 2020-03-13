@@ -1,30 +1,9 @@
-@using Tracker.Models
+<h1>Trip Details</h1>
+<h2>@Model.Business</h2>
+<h2>@Model.Buyer</h2>
+<h2>@Model.Description</h2>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vendor List</title>
-</head>
-<body>
 
-  <h1>Vendor Details</h1>
+<a href='/vendors/new'>Add another Trip</a>
+<a href='/vendors'>View all trips</a>
 
-  @if (Model.Count == 0)
-  {
-    <h1>go away</h1>
-  }
-  else
-  {
-    <ul>
-    @foreach (Vendor vendor in Model)
-    {
-      <li><a href='/vendors/@vendor.Business'>@vendor.Business</a></li>
-    }
-    </ul>
-  }
-
-  <a href= '/'>Go back</a>
-  
-</body>
-</html>

@@ -18,7 +18,7 @@ namespace Tracker.Controllers
       return View();
     }
     [HttpGet("/vendors")]
-    public ActionResult Show()
+    public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.RetrieveList();
       return View(allVendors);
