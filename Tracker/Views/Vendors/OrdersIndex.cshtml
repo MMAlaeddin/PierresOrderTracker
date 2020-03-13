@@ -1,0 +1,23 @@
+@using Tracker.Models
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vendor List</title>
+</head>
+<body>
+
+  <h1>Order Details</h1>
+    <ul>
+    @foreach (Order order in Model)
+    {
+      <li><a href='/orders/@order.Title'>@order.Title</a></li>
+    }
+    </ul>
+  
+
+  <a href= '/'>Go back</a>
+  
+</body>
+</html>

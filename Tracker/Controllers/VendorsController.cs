@@ -34,5 +34,11 @@ namespace Tracker.Controllers
     {
       return View();
     }
+    [HttpPost("/vendors/orders")]
+    public ActionResult Create(string title, string date, string details, int price)
+    {
+      Order newOrder = new Order(title, date, details, price);
+      return RedirectToAction("OrdersIndex", newOrder);
+    }
   }
 }
