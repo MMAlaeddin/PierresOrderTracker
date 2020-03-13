@@ -8,6 +8,7 @@ namespace Tracker.Models
     public string Business { get; set; }
     public string Buyer { get; set; }
     public string Description { get; set; }
+    public int Id { get; }
     private static List<Vendor> _instances = new List<Vendor> {};
 
     public Vendor(string business, string buyer, string description)
@@ -16,10 +17,15 @@ namespace Tracker.Models
       Buyer = buyer;
       Description = description;
       _instances.Add(this);
+      Id = _instances.Count;
     }
     public static List<Vendor> RetrieveList()
     {
       return _instances;
+    }
+    public static Vendor Find(int findBus)
+    {
+      return _instances[findBus-1];
     }
   }
 }

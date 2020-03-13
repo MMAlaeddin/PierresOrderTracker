@@ -23,5 +23,11 @@ namespace Tracker.Controllers
       List<Vendor> allVendors = Vendor.RetrieveList();
       return View(allVendors);
     }
+    [HttpGet("/vendors/{id}")]
+    public ActionResult Show(int Id)
+    {
+      Vendor findVendor = Vendor.Find(Id);
+      return View(findVendor);
+    }
   }
 }
