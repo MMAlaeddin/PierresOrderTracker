@@ -7,13 +7,6 @@ namespace Tracker.Controllers
 {
   public class OrderingController : Controller
   {
-
-    [HttpGet("/orders")]
-    public ActionResult Index()
-    {
-      List<Order> allOrders = Order.AddOrder();
-      return View(allOrders);
-    }
     [HttpGet("/orders/new")]
     public ActionResult New()
     {
@@ -22,7 +15,7 @@ namespace Tracker.Controllers
     [HttpPost("/orders")]
     public ActionResult Create(string orderTitle)
     {
-    Category newOrder = new Category(orderTitle);
+    Order newOrder = new Order(orderTitle);
     return RedirectToAction("Index");
     }
   }

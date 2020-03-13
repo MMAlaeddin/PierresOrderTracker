@@ -28,9 +28,5 @@ namespace Tracker.Models
     {
       return _orderInstance[AnId-0];
     }
-    public void AddOrder(Order order)
-    {
-      Vendors.Add(order);
-    }
   }
 }
