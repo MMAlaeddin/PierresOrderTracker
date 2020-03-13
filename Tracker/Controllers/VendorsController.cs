@@ -29,5 +29,10 @@ namespace Tracker.Controllers
       Vendor findVendor = Vendor.Find(Id);
       return View(findVendor);
     }
+    [HttpGet("/orders")]
+    public ActionResult Orders()
+    {
+      return View();
+    }
   }
 }
