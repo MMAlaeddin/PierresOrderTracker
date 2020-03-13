@@ -34,13 +34,13 @@ namespace Tracker.Controllers
     {
       return View();
     }
-    [HttpPost("/vendors/{id}")]
+    [HttpPost("/orders/new")]
     public ActionResult Create(string title, string date, string details, int price)
     {
       Order newOrder = new Order(title, date, details, price);
-      return RedirectToAction("OrdersIndex", newOrder);
+      return RedirectToAction("Show", newOrder);
     }
-    // [HttpGet("/vendors/{id}")]
+    // [HttpGet("/vendors/{id}/order")]
     // public ActionResult OrdersIndex()
     // {
     //   List<Order> allOrders = Order.OrderList();
