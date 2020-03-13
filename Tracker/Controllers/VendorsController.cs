@@ -34,11 +34,17 @@ namespace Tracker.Controllers
     {
       return View();
     }
-    [HttpPost("/vendors/orders")]
+    [HttpPost("/vendors/{id}")]
     public ActionResult Create(string title, string date, string details, int price)
     {
       Order newOrder = new Order(title, date, details, price);
       return RedirectToAction("OrdersIndex", newOrder);
     }
+    // [HttpGet("/vendors/{id}")]
+    // public ActionResult OrdersIndex()
+    // {
+    //   List<Order> allOrders = Order.OrderList();
+    //   return View(allOrders);
+    // }
   }
 }
