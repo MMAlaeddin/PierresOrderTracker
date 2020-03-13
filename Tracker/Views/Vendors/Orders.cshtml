@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Order for @Model.Business</title>
+</head>
+<body>
+  <h1>Please add Order:</h1>
+  <form action="/orders" method="post">
+  
+    <label for="orderTitle">Order Title</label>
+    <input type="text" id="orderTitle" name="orderTitle">
+    
+    <label for="orderItems">What would they like to order?</label>
+    <input type="text" id="orderItems" name="orderItems">
+
+    <label for="cost">Cost:</label>
+    <input type="text" id="cost" name="cost">
+
+    <button type="submit">Order Up</button>
+  
+  </form>
+</body>
+</html>
