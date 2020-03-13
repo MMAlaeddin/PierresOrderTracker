@@ -29,16 +29,5 @@ namespace Tracker.Controllers
       Vendor findVendor = Vendor.Find(Id);
       return View(findVendor);
     }
-    [HttpGet("/orders")]
-    public ActionResult Orders()
-    {
-      return View();
-    }
-    [HttpPost("/orders/new")]
-    public ActionResult Create(string title, string date, string details, int price)
-    {
-      Order newOrder = new Order(title, date, details, price);
-      return RedirectToAction("Show", newOrder);
-    }
   }
 }
