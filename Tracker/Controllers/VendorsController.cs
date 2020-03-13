@@ -17,5 +17,11 @@ namespace Tracker.Controllers
     {
       return View();
     }
+    [HttpGet("/vendors")]
+    public ActionResult Show()
+    {
+      List<Vendor> allVendors = Vendor.RetrieveList();
+      return View(allVendors);
+    }
   }
 }
