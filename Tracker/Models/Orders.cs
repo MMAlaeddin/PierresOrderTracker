@@ -5,23 +5,26 @@ namespace Tracker.Models
 {
   public class Order
   {
-    public string Title;
-    public string Date;
-    public string Details;
-    public int Price;
     private static List<Order> _orderInstance = new List<Order> {};
+    public string Title { get; set; }
+    public string Date { get; set; }
+    public string Details { get; set; }
+    public int Price { get; set; }
+    public int AnId { get; }
+    public List<Order> Orders { get; set; }
 
-    public Order(string title, string date, string details, int price)
+    public Order (string orderTitle)
     {
-      Title = title; 
-      Date = date;
-      Details = details;
-      Price = 0;
+      Title = orderTitle;
+      _orderInstance.Add(this)
+      AnId = _orderInstance.Count;
+      Orders = new List<Order>
     }
     public static List<Order> OrderList()
     {
       return _orderInstance;
     }
+
   }
 
 }

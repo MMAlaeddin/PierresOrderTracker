@@ -40,11 +40,5 @@ namespace Tracker.Controllers
       Order newOrder = new Order(title, date, details, price);
       return RedirectToAction("Show", newOrder);
     }
-    // [HttpGet("/vendors/{id}/order")]
-    // public ActionResult OrdersIndex()
-    // {
-    //   List<Order> allOrders = Order.OrderList();
-    //   return View(allOrders);
-    // }
   }
 }
