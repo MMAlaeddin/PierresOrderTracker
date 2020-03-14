@@ -1,15 +1,30 @@
-@using Tracker.Models;
+@using Tracker.Models
 
-<h1>Orders</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vendor List</title>
+</head>
+<body>
 
-@if (@Model.Count == 0)
-{
-  <h3>No categories have been added yet!</h3>
-} 
+  <h1>Vendor Details</h1>
 
-@foreach (Order order in Model)
-{
-  <h3><a href='/orders/@order.AnId'>@order.Title/a></h3>
-}
+  @if (Model.Count == 0)
+  {
+    <h1>go away</h1>
+  }
+  else
+  {
+    <ul>
+    @foreach (Order order in Model)
+    {
+      <li><a href='/orders/@order.Title'>@order.Title</a></li>
+    }
+    </ul>
+  }
 
-<p><a href='/'>Back home</a></p>
+  <a href= '/'>Go back</a>
+  
+</body>
+</html>
