@@ -10,8 +10,6 @@ namespace Tracker.Models
     public string Date { get; set; }
     public string Details { get; set; }
     public int Price { get; set; }
-    // public int AnId { get; }
-    // public List<Vendor> Vendors { get; set; }
 
     public Order (string title, string date, string details, int price)
     {
@@ -20,16 +18,10 @@ namespace Tracker.Models
       Details = details; 
       Price = price; 
       _orderInstance.Add(this);
-      // AnId = _orderInstance.Count;
-      // Vendors = new List<Vendor>{};
     }
     public static List<Order> OrderList()
     {
       return _orderInstance;
     }
-    // public static Order Find(int AnId)
-    // {
-    //   return _orderInstance[AnId-0];
-    // }
   }
 }
