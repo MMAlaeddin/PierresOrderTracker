@@ -1,10 +1,17 @@
-<h1>Trip Details</h1>
+@using Tracker.Models;
+
 <h2>@Model.Business</h2>
 <h3>@Model.Buyer</h2>
 <h4>@Model.Description</h2>
+
+@foreach (Order order in Model.AllOrders)
+{
+  <h2>@order.Title</h2>
+
+}
 
 
 
 <a href='/vendors/new'><button type="submit">Add another vendor</button></a>
 <a href='/vendors'><button type="submit">View Vendors</button></a>
-<a href='/orders/new'><button type="submit">Add an Order</button></a>
+<a href='/vendors/{Id}/orders/new'><button type="submit">Add an Order</button></a>

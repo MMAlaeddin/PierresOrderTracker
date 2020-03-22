@@ -8,8 +8,9 @@ namespace Tracker.Models
     public string Business { get; set; }
     public string Buyer { get; set; }
     public string Description { get; set; }
-    public int Id { get; }
-    private static List<Vendor> _instances = new List<Vendor> {};
+    public int Id { get; set; }
+    private static List<Vendor> _instances { get; set; } = new List<Vendor> {};
+    public List<Order> AllOrders = new List<Order> {};
 
     public Vendor(string business, string buyer, string description)
     {
@@ -25,7 +26,11 @@ namespace Tracker.Models
     }
     public static Vendor Find(int searchId)
     {
-      return _instances[searchId-0];
+      return _instances[searchId - 0];
+    }
+    public void VendorsOrder(Order order)
+    {
+      AllOrders.Add(order);
     }
   }
 }
