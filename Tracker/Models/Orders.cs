@@ -19,9 +19,9 @@ namespace Tracker.Models
       Price = price; 
       _orderInstance.Add(this);
     }
-    public static List<Order> OrderList()
-    {
-      return _orderInstance;
-    }
+    // public static List<Order> OrderList()
+    // {
+    //   return _orderInstance;
+    // }
   }
 }

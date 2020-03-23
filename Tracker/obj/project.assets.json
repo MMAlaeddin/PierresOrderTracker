@@ -12077,11 +12077,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mariamalaeddin/Desktop/PierresOrderTracker/Tracker/Vendors.csproj",
+      "projectUniqueName": "/Users/mariamalaeddin/Desktop/PierresOrderTracker 7.30.28 AM/Tracker/Vendors.csproj",
       "projectName": "Vendors",
-      "projectPath": "/Users/mariamalaeddin/Desktop/PierresOrderTracker/Tracker/Vendors.csproj",
+      "projectPath": "/Users/mariamalaeddin/Desktop/PierresOrderTracker 7.30.28 AM/Tracker/Vendors.csproj",
       "packagesPath": "/Users/mariamalaeddin/.nuget/packages/",
-      "outputPath": "/Users/mariamalaeddin/Desktop/PierresOrderTracker/Tracker/obj/",
+      "outputPath": "/Users/mariamalaeddin/Desktop/PierresOrderTracker 7.30.28 AM/Tracker/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
