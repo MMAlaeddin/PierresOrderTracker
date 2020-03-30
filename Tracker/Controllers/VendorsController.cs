@@ -10,7 +10,7 @@ namespace Tracker.Controllers
     public ActionResult Create(string business, string buyer, string description)
     {
       Vendor newVendor = new Vendor(business, buyer, description);
-      return RedirectToAction ("Index", newVendor);
+      return RedirectToAction ("Index");
     }
     [HttpGet("/vendors/new")]
     public ActionResult New()

@@ -26,7 +26,7 @@ namespace Tracker.Models
     }
     public static Vendor Find(int searchId)
     {
-      return _instances[searchId - 0];
+      return _instances[searchId - 1];
     }
     public void VendorsOrder(Order order)
     {
